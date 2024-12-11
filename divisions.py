@@ -1,6 +1,11 @@
 """
-1//2 ist ganzzahlige Division (ergibt 0)
-1/2 ist Fließkommadivision (ergibt 0.5)
-2**3 ist Potenzierung (2³ = 8)
-2*3 ist Multiplikation (2 × 3 = 6)
+Divisionsbeispiele
 """
+
+def run_divisions():
+    # Ausgabe der Divisionen
+    print("Beispiele für verschiedene Divisionen:")
+    print("1//2 =", 1//2, "(Ganzzahlige Division)")
+    print("1/2 =", 1/2, "(Fließkommadivision)")
+    print("2**3 =", 2**3, "(Potenzierung)")
+    print("2*3 =", 2*3, "(Multiplikation)")
