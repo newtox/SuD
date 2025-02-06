@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netzwerkdatenbanken</title>
+  <link rel="icon" href="./favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans">
+  <div id="intro-overlay">
+  </div>
+  <button id="focus-helper" style="opacity:0; position:absolute; left:-9999px;" autofocus></button>
+  <canvas id="effectsCanvas"></canvas>
+  <header class="header">
+    <h1 class="header-title">Netzwerkdatenbanken</h1>
+  </header>
+  <main id="slides-container">
+    <section class="slide" style="animation-delay: 0.2s;">
+      <div class="content">
+        <!-- <img src="images/definition.jpg" class="slide-img"> -->
+        <h2 class="slide-title">Definition</h2>
+        <p class="slide-text">
+          Datenbankmodell mit netzwerkartiger Struktur.
+          Mehrere übergeordnete Elemente möglich.
+          Entwickelt in den 1960er Jahren als Erweiterung des hierarchischen Modells.
+          Heute seltener genutzt, da relationale und NoSQL-Datenbanken flexibler sind.
+        </p>
+      </div>
+    </section>
+    <section class="slide" style="animation-delay: 0.4s;">
+      <div class="content">
+        <!-- <img src="images/merkmale.jpg" class="slide-img"> -->
+        <h2 class="slide-title">Merkmale</h2>
+        <ul class="slide-text list-disc">
+          <li>Kanten (Verbindungen) verknüpfen Datensätze</li>
+          <li>Mehrfachzuordnung möglich (ein Kind kann mehrere Eltern haben)</li>
+          <li>Zugriff über Navigationswege</li>
+          <li>Graphbasiertes Modell</li>
+          <li>Records &amp; Sets zur Abbildung von Beziehungen</li>
+          <li>Unterstützt viele-zu-viele-Beziehungen</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide" style="animation-delay: 0.6s;">
+      <div class="content">
+        <!-- <img src="images/aufbau.jpg" class="slide-img"> -->
+        <h2 class="slide-title">Aufbau &amp; Struktur</h2>
+        <ul class="slide-text list-disc">
+          <li>Knoten = Datensatz im Graphen</li>
+          <li>Kanten = Verbindungen zwischen Knoten</li>
+          <li>Records = Speicherung einzelner Datensätze</li>
+          <li>Sets = Gruppen von Datensätzen mit bestimmten Beziehungen</li>
+          <li>Zugriff über Traversierungen (Navigationspfade)</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide" style="animation-delay: 0.8s;">
+      <div class="content">
+        <!-- <img src="images/funktionsweise.jpg" class="slide-img"> -->
+        <h2 class="slide-title">Funktionsweise</h2>
+        <p class="slide-text">
+          Navigationsmodell mit expliziten Zeigern.
+          Anwendung muss Beziehungen kennen, um effizient auf Daten zuzugreifen.
+          Direkte Verbindungen ermöglichen schnellen Zugriff.
+          Erfordert detaillierte Kenntnis der Datenbankstruktur.
+        </p>
+      </div>
+    </section>
+    <section class="slide" style="animation-delay: 1.2s;">
+      <div class="content">
+        <!-- <img src="images/vor-nachteile.jpg" class="slide-img"> -->
+        <h2 class="slide-title">Vor- &amp; Nachteile</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <section>
+            <h3 class="sub-title">Vorteile</h3>
+            <ul class="slide-text list-disc">
+              <li>Effiziente Speicherung &amp; schneller Zugriff</li>
+              <li>Flexibler als hierarchische Modelle</li>
+              <li>Geeignet für komplexe, vernetzte Datenstrukturen</li>
+              <li>Optimale Performance großer Datenmengen</li>
+              <li>Besseres Handling von viele-zu-viele-Beziehungen</li>
+            </ul>
+          </section>
+          <section>
+            <h3 class="sub-title">Nachteile</h3>
+            <ul class="slide-text list-disc">
+              <li>Komplexe Implementierung &amp; Verwaltung</li>
+              <li>Schwierige Anpassung bei Strukturänderungen</li>
+              <li>Erfordert tiefes Verständnis der Navigationswege</li>
+              <li>Eingeschränkte Flexibilität im Vergleich zu relationalen Modellen</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section class="slide" style="animation-delay: 1s;">
+      <div class="content">
+        <!-- <img src="images/beispiel.jpg" class="slide-img"> -->
+        <h2 class="slide-title">Beispiel-Einsatz</h2>
+        <ul class="slide-text list-disc">
+          <li>
+            Unternehmenssysteme:
+            <ul class="list-disc sub-list">
+              <li>Mitarbeiter in mehreren Abteilungen</li>
+              <li>Projekte, die mehrere Abteilungen betreuen</li>
+              <li>Lieferanten liefern verschiedene Produkte</li>
+            </ul>
+          </li>
+          <li>Flugreservierungssysteme: Passagiere, Flüge, Sitzplätze</li>
+          <li>Versicherungen: Policen, Kunden, Schadensfälle</li>
+          <li>Produktionssysteme: Rohstoffe, Lieferanten, Endprodukte</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide" style="animation-delay: 1.4s;">
+      <div class="content">
+        <!-- <img src="images/danke.jpg" class="slide-img"> -->
+        <h2 class="slide-title">Danke für's zuhören!</h2>
+        <p class="slide-text">
+          Daniel<br>
+          Justin<br>
+          Mykhailo
+        </p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
